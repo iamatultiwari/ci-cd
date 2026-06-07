@@ -11,5 +11,12 @@ app.get("/",(req,res) => {
 
 
 app.listen(port,() => {
-    console.log(`the server is running on port${port}`)
+    console.log(`the server is running on port ${port}`)
+})
+
+
+app.get("/home", async (req,res)  => {
+    res.json({
+        msg:"i am root"
+    });
 })
